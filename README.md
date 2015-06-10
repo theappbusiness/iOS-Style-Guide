@@ -10,4 +10,4 @@ These are our iOS style guides
 
 These were both originally forks from the [NYT](https://github.com/NYTimes/objective-c-style-guide) & [GitHub](https://github.com/github/swift-style-guide) and have now been combined into one repo.
 
-You can find the style guides for our other engineering teams [here](https://github.com/theappbusiness?utf8=✓&query=style).
+You can find the style guides for our other engineering teams [here](https://github.com/theappbusiness?utf8=✓&query=guide).
