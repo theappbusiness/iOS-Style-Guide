@@ -10,4 +10,4 @@ At [The App Business](http://theappbusiness.com) we believe that writing clean, 
 
 These are modified forks from the [NYT](https://github.com/NYTimes/objective-c-style-guide) and [GitHub](https://github.com/github/swift-style-guide) which have now been combined into one repo.
 
-You can find the style guides for our other engineering teams [here](https://github.com/theappbusiness?utf8=✓&query=guide).
+You can find all the style guides from our other engineering teams [here](https://github.com/theappbusiness?utf8=✓&query=guide).
