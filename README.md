@@ -1,6 +1,6 @@
 ![The App Business](https://github.com/theappbusiness/iOS-Style-Guide/blob/master/assets/logo.png)
 
-At [The App Business](http://theappbusiness.com) we believe that writing clean, clear, and consistent code forms the foundations of every great app we build. One of the ways we ensure we do this is with our coding style guides. We've published ours on GitHub so we can quickly iterate on it, and to give others an insight into how we work.
+At [The App Business](http://theappbusiness.com) we believe that writing clean, clear, and consistent code forms the foundations of every great app we build. One of the ways we stay on top of this is with our coding style guides. We've published ours to GitHub so we can quickly iterate on them, and to give others an insight into how we work.
 
 ##### Our iOS style guides
 
