@@ -1,9 +1,13 @@
 ![The App Business](https://github.com/theappbusiness/tab-ios-style-guide/blob/master/assets/logo.png)
 
-At [The App Business](https://theappbusiness.com) we believe in writing clean, clear, and consistent code within each of our engineering teams. One of the ways we do this is with our coding style guides. We decided to keep ours open source so that anyone in our team can make suggestions to it, and so everyone else can see how we work.
+At [The App Business](https://theappbusiness.com) we believe that writing clean, clear, and consistent code forms the foundations of every great app we build. One of the ways we ensure we do this is with our coding style guides. We've made ours open source so we can quickly iterate on it, and so you can get an insight into how we work.
 
-These are our iOS style guides. We use one for [Objective-C](https://github.com/theappbusiness/tab-ios-style-guide/blob/master/objective-c.md) that we've had for a while, and one for [Swift](https://github.com/theappbusiness/tab-ios-style-guide/blob/master/swift.md) which we're still figuring out best practices for. 
+These are our iOS style guides
 
-These were both originally forks from the [NYT](https://github.com/NYTimes/objective-c-style-guide) & [GitHub](https://github.com/github/swift-style-guide) and have been combined into one repo.
+- [Objective-C](https://github.com/theappbusiness/tab-ios-style-guide/blob/master/objective-c.md)
+- [Swift](https://github.com/theappbusiness/tab-ios-style-guide/blob/master/swift.md)
 
-You can find our style guides for the other teams [here](https://github.com/theappbusiness?utf8=✓&query=style).
+
+These were both originally forks from the [NYT](https://github.com/NYTimes/objective-c-style-guide) & [GitHub](https://github.com/github/swift-style-guide) and have now been combined into one repo.
+
+You can find the style guides for our other engineering teams [here](https://github.com/theappbusiness?utf8=✓&query=style).
