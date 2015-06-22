@@ -285,13 +285,13 @@ Use names for the values of a tuple to make clear what the value is representing
 Instead of: 
 
 ```swift
-var vehicle = (4, "car")
+let vehicle = (4, "car")
 ```
 
 write: 
 
 ```swift
-var vehicle = (wheels: 4, name: "Car”)
+let vehicle = (wheels: 4, type: "Car”)
 ```
 
 The same rule applies when the tuple is used as part of a function, instead of:
@@ -304,11 +304,8 @@ func refreshWebPage() -> (Int, String) {
 write:
 
 ```swift
-func refreshWebPage() -> (code: Int, message: String) {    // ...try to refresh...    return (200, "Success")}
+func refreshWebPage() -> (statusCode: Int, message: String) {    // ...try to refresh...    return (200, "Success")}
 ```
-
-
-
 #### Translations
 
 * [中文版](https://github.com/Artwalk/swift-style-guide/blob/master/README_CN.md)
