@@ -280,6 +280,35 @@ func <|< <A>(lhs: A, rhs: A) -> A
 
 _Rationale:_ Operators consist of punctuation characters, which can make them difficult to read when immediately followed by the punctuation for a type or value parameter list. Adding whitespace separates the two more clearly.
 
+#### Tuple must be composed of named values 
+Use names for the values of a tuple to make clear what the value is representing.
+Instead of: 
+
+```swift
+var vehicle = (4, "car")
+```
+
+write: 
+
+```swift
+var vehicle = (wheels: 4, name: "Car”)
+```
+
+The same rule applies when the tuple is used as part of a function, instead of:
+
+```swift
+func refreshWebPage() -> (Int, String) {
+    // ...try to refresh...    return (200, "Success")}
+```
+
+write:
+
+```swift
+func refreshWebPage() -> (code: Int, message: String) {    // ...try to refresh...    return (200, "Success")}
+```
+
+
+
 #### Translations
 
 * [中文版](https://github.com/Artwalk/swift-style-guide/blob/master/README_CN.md)
