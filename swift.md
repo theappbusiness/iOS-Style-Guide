@@ -285,7 +285,7 @@ Use names for the values of a tuple to make clear what the value is representing
 Instead of: 
 
 ```swift
-let vehicle = (4, "car")
+let vehicle = (4, "Car")
 ```
 
 write: 
@@ -298,14 +298,33 @@ The same rule applies when the tuple is used as part of a function, instead of:
 
 ```swift
 func refreshWebPage() -> (Int, String) {
-    // ...try to refresh...    return (200, "Success")}
+    // ...try to refresh...
+    return (200, "Success")
+}
 ```
 
 write:
 
 ```swift
-func refreshWebPage() -> (statusCode: Int, message: String) {    // ...try to refresh...    return (200, "Success")}
+func refreshWebPage() -> (statusCode: Int, message: String) {
+    // ...try to refresh...
+    return (200, "Success")
+}
 ```
+
+However if the tuple type identity may be used in multiple locations then prefer to promote the tuple to a named type:
+
+```swift
+typealias WebResponse = (statusCode: Int, message: String)
+
+func refreshWebPage() -> WebResponse {
+    // ...try to refresh...
+    return (200, "Success")
+}
+```
+
+This ensures a common declaration of the tuple that enforces consistant use throughout the app.
+
 #### Translations
 
 * [中文版](https://github.com/Artwalk/swift-style-guide/blob/master/README_CN.md)
