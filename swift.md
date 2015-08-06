@@ -229,6 +229,44 @@ struct Car: Vehicle {
 
 _Rationale:_ Value types are simpler, easier to reason about, and behave as expected with the `let` keyword.
 
+
+#### Value Types should always conform to `Equatable`
+
+Unlike classes which can be equated by comparing their reference, value type equality is established by its value.
+
+So its important that all structs comform to the `Equatable` protocol to determine equality.
+
+```swift
+let a = [1, 2, 3]
+let b = [3, 2, 1]
+
+print(a == b) // true
+```
+
+When determing equality for a Value Type, consider the following:
+
+`x == x` is `true`
+`x == y` then `y == x`
+`x == y` and `y == z` then `x == z`
+
+```swift
+struct Circle: Equatable {
+  let center: CGPoint
+  let radius: Double
+    
+  init(center: CGPoint, radius: Double) {
+    self.center = center
+    self.radius = radius
+  }
+}
+
+func == (lhs: Circle, rhs: Circle) {
+  return lhs.center == rhs.center && lhs.radius == rhs.radius
+}
+```
+
+_Rationale:_ 
+
 #### Make classes `final` by default
 
 Classes should start as `final`, and only be changed to allow subclassing if a valid need for inheritance has been identified. Even in that case, as many definitions as possible _within_ the class should be `final` as well, following the same rules.
