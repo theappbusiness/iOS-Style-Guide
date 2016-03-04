@@ -15,7 +15,7 @@ then open a pull request. :zap:
 
 #### Whitespace
 
- * Tabs, not spaces.
+ * Indent using 2 spaces. Never indent with tabs. Be sure to set this preference in Xcode.
  * End files with a newline.
  * Make liberal use of vertical whitespace to divide code into logical chunks.
  * Don’t leave trailing whitespace.
@@ -76,7 +76,7 @@ var myGreatProperty: Int {
 }
 
 subscript(index: Int) -> T {
-    return objects[index]
+  return objects[index]
 }
 ```
 
@@ -90,9 +90,9 @@ var myGreatProperty: Int {
 }
 
 subscript(index: Int) -> T {
-    get {
-        return objects[index]
-    }
+  get {
+      return objects[index]
+  }
 }
 ```
 
@@ -183,27 +183,27 @@ For example, this class hierarchy:
 
 ```swift
 class Vehicle {
-    let numberOfWheels: Int
+  let numberOfWheels: Int
 
-    init(numberOfWheels: Int) {
-        self.numberOfWheels = numberOfWheels
-    }
+  init(numberOfWheels: Int) {
+      self.numberOfWheels = numberOfWheels
+  }
 
-    func maximumTotalTirePressure(pressurePerWheel: Float) -> Float {
-        return pressurePerWheel * numberOfWheels
-    }
+  func maximumTotalTirePressure(pressurePerWheel: Float) -> Float {
+      return pressurePerWheel * numberOfWheels
+  }
 }
 
 class Bicycle: Vehicle {
-    init() {
-        super.init(numberOfWheels: 2)
-    }
+  init() {
+      super.init(numberOfWheels: 2)
+  }
 }
 
 class Car: Vehicle {
-    init() {
-        super.init(numberOfWheels: 4)
-    }
+  init() {
+      super.init(numberOfWheels: 4)
+  }
 }
 ```
 
@@ -211,19 +211,19 @@ could be refactored into these definitions:
 
 ```swift
 protocol Vehicle {
-    var numberOfWheels: Int { get }
+  var numberOfWheels: Int { get }
 }
 
 func maximumTotalTirePressure(vehicle: Vehicle, pressurePerWheel: Float) -> Float {
-    return pressurePerWheel * vehicle.numberOfWheels
+  return pressurePerWheel * vehicle.numberOfWheels
 }
 
 struct Bicycle: Vehicle {
-    let numberOfWheels = 2
+  let numberOfWheels = 2
 }
 
 struct Car: Vehicle {
-    let numberOfWheels = 4
+  let numberOfWheels = 4
 }
 ```
 
@@ -298,8 +298,8 @@ The same rule applies when the tuple is used as part of a function, instead of:
 
 ```swift
 func refreshWebPage() -> (Int, String) {
-    // ...try to refresh...
-    return (200, "Success")
+  // ...try to refresh...
+  return (200, "Success")
 }
 ```
 
@@ -307,8 +307,8 @@ write:
 
 ```swift
 func refreshWebPage() -> (statusCode: Int, message: String) {
-    // ...try to refresh...
-    return (200, "Success")
+  // ...try to refresh...
+  return (200, "Success")
 }
 ```
 
@@ -318,8 +318,8 @@ However if the tuple type identity may be used in multiple locations then prefer
 typealias WebResponse = (statusCode: Int, message: String)
 
 func refreshWebPage() -> WebResponse {
-    // ...try to refresh...
-    return (200, "Success")
+  // ...try to refresh...
+  return (200, "Success")
 }
 ```
 
